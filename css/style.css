@@ -59,14 +59,14 @@ a {
 }
 
 .btn-outline {
-    background-color: transparent;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
+    background-color: var(--primary-color) !important;
+    border: 2px solid var(--primary-color) !important;
+    color: var(--light-text) !important;
 }
 
 .btn-outline:hover {
-    background-color: var(--primary-color);
-    color: var(--light-text);
+    background-color: var(--dark-color) !important;
+    border-color: var(--dark-color) !important;
 }
 
 .btn-small {
@@ -116,6 +116,10 @@ nav {
     margin-left: 20px;
 }
 
+.nav-links li a {
+    white-space: nowrap; /* Mencegah pemotongan teks */
+}
+
 .nav-links a {
     font-weight: 600;
     transition: color 0.3s ease;
@@ -130,6 +134,12 @@ nav {
 
 .dropdown {
     position: relative;
+}
+
+.dropdown > a {
+    display: inline-flex; /* Menggunakan flex untuk penataan yang lebih baik */
+    align-items: center;
+    gap: 5px;
 }
 
 .dropdown-content {
@@ -178,6 +188,9 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    /* Tambahan untuk responsif */
+    width: 100%;
+    max-width: 180px; /* Lebar maksimum di desktop */
 }
 
 #wallet-balance {
@@ -188,6 +201,11 @@ nav {
 #connect-wallet {
     padding: 8px 16px;
     font-size: 0.9rem;
+    /* Tambahan untuk responsif */
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .mobile-menu-btn {
@@ -202,7 +220,7 @@ nav {
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(58, 50, 38, 0.7), rgba(58, 50, 38, 0.7)), 
-                url('assets/cafe-interior.jpg') no-repeat center center/cover;
+                url('../assets/cafe-interior.jpg') no-repeat center center/cover;
     height: 80vh;
     display: flex;
     align-items: center;
@@ -541,6 +559,7 @@ footer h3 {
         width: 100%;
         background-color: var(--primary-color);
         flex-direction: column;
+        align-items: flex-start;
         padding: 20px;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     }
@@ -550,19 +569,38 @@ footer h3 {
     }
     
     .nav-links li {
-        margin: 10px 0;
+        margin: 5px 0;
+        width: 100%;
     }
-    
+    .dropdown > a {
+        justify-content: space-between;
+        width: 100%;
+    }
+
     .dropdown-content {
         position: static;
+        width: 100%;
         box-shadow: none;
         background-color: rgba(0, 0, 0, 0.1);
     }
     
     .wallet-info {
-        margin-left: 0;
-        margin-top: 20px;
-        align-items: flex-start;
+            margin-left: 0;
+            margin-top: 15px;
+            align-items: flex-start;
+            max-width: 100%; /* Penuh di mobile */
+    }
+
+    #connect-wallet {
+        padding: 0;
+        font-size: 0.8rem;
+        width: auto; /* Sesuaikan dengan konten */
+        min-width: 80px; /* Lebar minimum */
+    }  
+    
+    #wallet-balance {
+        font-size: 0.8rem;
+        margin-bottom: 8px;
     }
     
     .mobile-menu-btn {

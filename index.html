@@ -7,14 +7,18 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/script.js"></script>
 </head>
 <body>
+    <!--Header memuat judul dan navigasi-->
     <header>
+        <!--judul-->
         <div class="container">
             <div class="logo">
                 <h1>SABAM BLOCKCHAIN CAFE</h1>
                 <p>Blockchain Cafe</p>
             </div>
+            <!--navigasi-->
             <nav>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
@@ -45,12 +49,15 @@
                     <button id="connect-wallet">Connect Wallet</button>
                 </div>
             </nav>
+
+            <!--navigasi untuk screen mobile-->
             <button class="mobile-menu-btn" id="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </header>
 
+    <!--elemen main-->
     <main>
         <section class="hero" id="home">
             <div class="container">
@@ -99,29 +106,31 @@
                 </div>
             </div>
         </section>
-    </main>
-
-    <aside class="blockchain-info">
-        <div class="container">
-            <div class="info-content">
-                <article class="info-text">
-                    <h2>The SABAM Token Ecosystem</h2>
-                    <p>SABAM is our proprietary cryptocurrency designed exclusively for our cafe experience. Benefits include:</p>
-                    <ul>
-                        <li>5% discount on all purchases</li>
-                        <li>Exclusive member-only menu items</li>
-                        <li>Earn tokens with every purchase</li>
-                        <li>Voting rights for cafe decisions</li>
-                    </ul>
-                    <button class="btn">Learn More</button>
-                </article>
-                <div class="info-image">
-                    <img src="assets/blockchain-tech.jpg" alt="Blockchain Technology">
+        
+<!--elemen aside-->
+        <aside class="blockchain-info">
+            <div class="container">
+                <div class="info-content">
+                    <article class="info-text">
+                        <h2>The SABAM Token Ecosystem</h2>
+                        <p>SABAM is our proprietary cryptocurrency designed exclusively for our cafe experience. Benefits include:</p>
+                        <ul>
+                            <li>5% discount on all purchases</li>
+                            <li>Exclusive member-only menu items</li>
+                            <li>Earn tokens with every purchase</li>
+                            <li>Voting rights for cafe decisions</li>
+                        </ul>
+                        <button class="btn">Learn More</button>
+                    </article>
+                    <div class="info-image">
+                        <img src="assets/blockchain-tech.jpg" alt="Blockchain Technology">
+                    </div>
                 </div>
             </div>
-        </div>
-    </aside>
+        </aside>
 
+    </main>
+    <!--elemen footer-->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -154,8 +163,6 @@
                 <p>&copy; 2023 SABAM Blockchain Cafe. All rights reserved.</p>
             </div>
         </div>
-    </footer>
-
-    <script src="js/script.js"></script>
+    </footer>   
 </body>
 </html>
